@@ -20,16 +20,20 @@ class LoginActivity : AppCompatActivity() {
         btnLogin=findViewById(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
-            val user=username.text.toString()
-            val pass=password.text.toString()
-
-            if (user=="softwarica" && pass=="coventry"){
-                val intent=Intent(this,MainActivity::class.java)
-                startActivity(intent)
-            }else{
-                Toast.makeText(this,"Username or password incorrect",Toast.LENGTH_LONG).show()
-            }
+           data()
         }
 
+    }
+
+    private fun data() {
+        val user=username.text.toString()
+        val pass=password.text.toString()
+
+        if (user == "softwarica" && pass == "coventry"){
+            val intent=Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }else{
+            Toast.makeText(this,"Username or password incorrect",Toast.LENGTH_LONG).show()
+        }
     }
 }
