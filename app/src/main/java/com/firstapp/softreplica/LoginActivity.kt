@@ -18,11 +18,19 @@ class LoginActivity : AppCompatActivity() {
         username=findViewById(R.id.username)
         password=findViewById(R.id.password)
         btnLogin=findViewById(R.id.btnLogin)
+        TextChange()
 
         btnLogin.setOnClickListener {
            data()
         }
 
+
+    }
+
+    private fun TextChange() {
+        password.addTextChangedListener(
+
+        )
     }
 
     private fun data() {
@@ -32,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
         if (user == "softwarica" && pass == "coventry"){
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
+            Toast.makeText(this,"Logged in Successfully",Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(this,"Username or password incorrect",Toast.LENGTH_LONG).show()
         }
