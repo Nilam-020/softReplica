@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
         username=findViewById(R.id.username)
         password=findViewById(R.id.password)
         btnLogin=findViewById(R.id.btnLogin)
-        TextChange()
+
 
         btnLogin.setOnClickListener {
            data()
@@ -27,11 +27,6 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun TextChange() {
-        password.addTextChangedListener(
-
-        )
-    }
 
     private fun data() {
         val user=username.text.toString()
